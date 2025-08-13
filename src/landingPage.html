@@ -36,7 +36,7 @@
             <span class="my-1 text-[16px] whitespace-nowrap text-fade">Academic Record</span>
             <i id="arrow-about" class="fa-solid fa-angle-down text-[14px] ml-5 arrow-transition"></i>
           </div>
-          <div id="about" class="ml-15 mt-2 text-[14px] dropdown-transition dropdown-hidden dropdown-content overflow-hidden">
+          <div id="about" class="ml-15 mt-2 text-[14px] dropdown-transition dropdown-content overflow-hidden">
             <ul class="space-y-3 list-none p-0">
               <li>
                 <a href="" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Subjects</a>
@@ -110,60 +110,6 @@
         </main>
     </div>
   </div>
-  <script>
-    function toggleSidebar() {
-      const sidebar = document.getElementById('sidebar');
-      const currentWidth = sidebar.style.width;
-      
-      if (currentWidth === '80px') {
-
-        sidebar.style.width = '280px';
-        sidebar.classList.remove('sidebar-collapsed');
-      } else {
-
-        const dropdowns = document.querySelectorAll('.dropdown-content');
-        const arrows = document.querySelectorAll('.arrow-transition');
-        
-        dropdowns.forEach(dropdown => {
-          dropdown.classList.add('dropdown-hidden');
-        });
-        
-        arrows.forEach(arrow => {
-          if (arrow.classList.contains('fa-angle-down')) {
-            arrow.classList.replace('fa-angle-down', 'fa-angle-right');
-          }
-        });
-        
-        sidebar.style.width = '80px';
-        sidebar.classList.add('sidebar-collapsed');
-      }
-    }
-
-    function toggleFolder(id) {
-      const sidebar = document.getElementById('sidebar');
-      
-      if (sidebar.classList.contains('sidebar-collapsed')) {
-        return;
-      }
-      
-      const folder = document.getElementById(id);
-      const arrow = document.getElementById('arrow-' + id);
-      
-      if (folder.classList.contains('dropdown-hidden')) {
-        folder.classList.remove('dropdown-hidden');
-        arrow.classList.replace('fa-angle-right', 'fa-angle-down');
-      } else {
-        folder.classList.add('dropdown-hidden');
-        arrow.classList.replace('fa-angle-down', 'fa-angle-right');
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const dropdowns = document.querySelectorAll('.dropdown-content');
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.add('dropdown-hidden');
-      });
-    });
-  </script>
+  <script src="js/forStatic.js"></script>
 </body>
 </html>
