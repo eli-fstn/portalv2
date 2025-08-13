@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="input.css">
+    <link href="./output.css" rel="stylesheet">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 p-0">
+  <div id="sidebar"
+       class="fixed top-0 left-0 h-screen bg-[#013169] overflow-hidden w-[280px] z-30 transition-all duration-300 ease-in-out">
+    <div class="flex justify-center items-center p-3 mt-1">
+      <img src="images/schoolLogo.PNG" class="h-12 w-12 object-contain ml-1" alt="School Logo">
+      <p class="text-white font-bold text-[20px] leading-none ml-1 whitespace-nowrap text-fade">STUDENT PORTAL</p>
+    </div>
+    <hr class="border-[#4b608e] mt-1">
+    <ul class="text-white text-[16px] font-light list-none p-0">
+      <li class="my-2 mt-5">
+        <a href="landingPage.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+          <i class="fa-solid fa-chart-line mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="whitespace-nowrap text-fade">Dashboard</span>
+        </a>
+      </li>
+      <li class="my-2">
+        <a href="userProfile.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+          <i class="fa-solid fa-user mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="whitespace-nowrap text-fade">My Profile</span>
+        </a>
+      </li>
+      <li class="my-2">
+        <div class="cursor-pointer flex items-center hover:bg-[#496592] py-2 mx-2 rounded transition-colors duration-300"
+             onclick="toggleFolder('about')">
+          <i class="fa-solid fa-chart-column mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="my-1 text-[16px] whitespace-nowrap text-fade">Academic Record</span>
+          <i id="arrow-about" class="fa-solid fa-angle-down text-[14px] ml-5 arrow-transition"></i>
+        </div>
+        <div id="about" class="ml-15 mt-2 text-[14px] dropdown-transition dropdown-hidden overflow-hidden">
+          <ul class="space-y-3 list-none p-0">
+            <li><a href="" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Subjects</a></li>
+            <li><a href="" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Schedule</a></li>
+            <li><a href="" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Grades</a></li>
+            <li><a href="" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Balance</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="my-2">
+        <a href="" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+          <i class="fa-solid fa-bullhorn mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="whitespace-nowrap text-fade">Announcements</span>
+        </a>
+      </li>
+      <li class="my-2">
+        <a href="index.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+          <i class="fa-solid fa-right-from-bracket mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="whitespace-nowrap text-fade">Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <nav id="navbar"
+       class="fixed top-0 left-[280px] w-[calc(100%-280px)] h-10 bg-[#f5f5f5] shadow flex items-center z-20 transition-all duration-300 ease-in-out">
+    <button onclick="toggleSidebar()"
+            class="bg-transparent border-none text-[20px] ml-3 cursor-pointer px-2 rounded hover:bg-gray-200 transition-colors duration-300">
+      <i class="fa-solid fa-bars text-gray-400"></i>
+    </button>
+    <p class="text-gray-600 font-bold ml-3">Dashboard</p>
+  </nav>
+  <main id="main-content" class="transition-all duration-300 ease-in-out pt-12 ml-[280px]">
+    <div class="p-6 mx-4 mt-4 shadow-md rounded-b-lg rounded-t-lg">
+      <p class="text-[#2A7BD9] text-[23px] font-bold">Personal Info</p>
+      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
+        <p>Given Name</p>
+        <p>Middle Name</p>
+        <p>Surname</p>
+        <p>Suffix</p>
+      </div>
+      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
+        <p>Juan</p>
+        <p>Pancho</p>
+        <p>Dela Cruz</p>
+        <i>Not Available</i>
+      </div>
+      <div class="grid grid-cols-4 text-[15px] font-bold text-[#a6a7a8]">
+        <p>Sex at birth</p>
+        <p>Nationality</p>
+        <p>Date at birth</p>
+        <p>Civil Status</p>
+      </div>
+      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
+        <p>Male</p>
+        <p>Filipino</p>
+        <p>December 12, 2006</p>
+        <p>Single</p>
+      </div>
+      <div class="grid grid-cols-4 text-[15px] font-bold text-[#a6a7a8]">
+        <p>Religion</p>
+        <p>Contact Number</p>
+      </div>
+      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
+        <p>Catholic</p>
+        <p>09123456789</p>
+      </div>
+    </div>
+    <div class="mb-8 p-6 mx-4 mt-4 shadow-md rounded-b-lg rounded-t-lg">
+      <p class="text-[#2A7BD9] text-[23px] font-bold">Residential Address</p>
+      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
+        <p>Street/Subdivision</p>
+        <p>Region</p>
+        <p>Province</p>
+        <p>Municipality</p>
+      </div>
+      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
+        <p>Sampaloc Street, Meadowood Executive Village</p>
+        <p>Region IV-A (CALABARZON)</p>
+        <p>Cavite</p>
+        <p>City of Bacoor</p>
+      </div>
+      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
+        <p>Barangay</p>
+        <p>Zip Code</p>
+      </div>
+      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
+        <p>P.F Espiritu VIII</p>
+        <p>4102</p>
+      </div>
+    </div>
+    <div class="p-6 mx-4 mt-4 mb-5 shadow-md rounded-b-lg rounded-t-lg">
+      <p class="text-[#2A7BD9] text-[23px] font-bold">School Information</p>
+      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
+        <p>Level</p>
+        <p>Section/Strand</p>
+        <p>Student Number</p>
+        <p>LRN</p>
+      </div>
+      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
+        <p>Grade 12</p>
+        <p>TVL - ICT A (Ezra)</p>
+        <p>1234567890</p>
+        <p>197230157230</p>
+      </div>
+      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
+        <p>Class Adviser</p>
+      </div>
+      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
+        <p>Mr. Lewis Hamilton</p>
+      </div>
+    </div>
+  </main>
+  <script>
+    function toggleSidebar() {
+
+      const sidebar = document.getElementById('sidebar');
+      const navbar = document.getElementById('navbar');
+      const main = document.getElementById('main-content');
+      const isCollapsed = sidebar.classList.contains('sidebar-collapsed');
+
+      if (isCollapsed) {
+
+        sidebar.style.width = '280px';
+        navbar.style.left = '280px';
+        navbar.style.width = 'calc(100% - 280px)';
+        main.style.marginLeft = '280px';
+        sidebar.classList.remove('sidebar-collapsed');
+
+      } else {
+
+        const dropdowns = document.querySelectorAll('.dropdown-transition');
+        const arrows = document.querySelectorAll('.arrow-transition');
+
+        dropdowns.forEach(d => d.classList.add('dropdown-hidden'));
+        arrows.forEach(arrow => {
+
+          if (arrow.classList.contains('fa-angle-down')) {
+            arrow.classList.replace('fa-angle-down', 'fa-angle-right');
+          }
+        });
+
+        sidebar.style.width = '80px';
+        navbar.style.left = '80px';
+        navbar.style.width = 'calc(100% - 80px)';
+        main.style.marginLeft = '80px';
+        sidebar.classList.add('sidebar-collapsed');
+
+      }
+    }
+
+    function toggleFolder(id) {
+      const sidebar = document.getElementById('sidebar');
+      if (sidebar.classList.contains('sidebar-collapsed')) return;
+
+      const folder = document.getElementById(id);
+      const arrow = document.getElementById('arrow-' + id);
+
+      if (folder.classList.contains('dropdown-hidden')) {
+        folder.classList.remove('dropdown-hidden');
+        arrow.classList.replace('fa-angle-right', 'fa-angle-down');
+      } else {
+        folder.classList.add('dropdown-hidden');
+        arrow.classList.replace('fa-angle-down', 'fa-angle-right');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      const dropdowns = document.querySelectorAll('.dropdown-transition');
+      dropdowns.forEach(d => d.classList.add('dropdown-hidden'));
+      
+      const navbar = document.getElementById('navbar');
+      const main = document.getElementById('main-content');
+      navbar.style.left = '280px';
+      navbar.style.width = 'calc(100% - 280px)';
+      main.style.marginLeft = '280px';
+
+    });
+  </script>
+</body>
+</html>

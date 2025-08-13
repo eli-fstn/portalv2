@@ -4,39 +4,39 @@ body {
     font-family: inherit
 }
 .sidebar-transition {
-    transition: width 0.3s ease;
+    transition:
+     width 0.3s ease;
 }
-
 .text-fade {
-    transition: opacity 0.3s ease;
+    transition: 
+    opacity 0.3s ease;
 }
-
 .sidebar-collapsed .text-fade {
     opacity: 0;
     width: 0;
     overflow: hidden;
+    pointer-events: none; 
 }
-
 .dropdown-transition {
-    transition: max-height 0.3s ease, opacity 0.3s ease;
+    transition: 
+    max-height 0.3s ease, 
+    opacity 0.3s ease;
     max-height: 200px;
+    transition: all .3s ease; 
 }
-
 .dropdown-hidden {
     max-height: 0 !important;
     opacity: 0 !important;
     overflow: hidden;
+    pointer-events: none; 
 }
-
 .sidebar-collapsed .dropdown-content {
     max-height: 0 !important;
     opacity: 0 !important;
 }
-
 .arrow-transition {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
 .sidebar-collapsed .arrow-transition {
     opacity: 0;
 }
