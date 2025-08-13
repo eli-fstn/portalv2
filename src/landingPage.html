@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="input.css">
+    <link href="./output.css" rel="stylesheet">
     <title>Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -73,14 +74,34 @@
         </button>
             <p class="text-gray-600 font-bold ml-3">Dashboard</p>
       </nav>
-        <main class="grid cols-4 grid-rows-4">
-            <div class="col-start-1 col-end-3 row-start-1 row-end-2 m-5 h-40 border shadow flex items-center">
-              <p class="font-bold ml-5 text-2xl">Hello there, Dela Cruz!</p>
+        <main class="grid cols-3 grid-rows-3 gap-5 mt-5 mx-5">
+            <div class="col-start-1 col-end-3 row-start-1 row-end-2 h-40 border shadow flex flex-col">
+              <p class="font-bold ml-5 text-3xl mt-10">Hello there, Dela Cruz!</p>
+              <p class="ml-5 text-[15px]">Always stay updated in your student portal.</p>
             </div>
-                <div class="col-start-1 col-end-2 row-start-2 row-end-3 h-25 border shadow flex items-center ml-5">school year</div>
-                    <div class="col-start-2 col-end-3 row-start-2 row-end-3 h-25 border shadow flex items-center ml-5">balance</div>
-                      <div class="col-start-1 col-end-3 row-start-3 row-end-4 h-40 m-5 border shadow flex items-center">account</div>
-                        <div class="col-start-3 col-end-5 row-start-1 row-end-4 border shadow flex items-center">announcements</div>
+                <div class="col-start-1 col-end-2 row-start-2 row-end-3 h-25 border shadow flex flex-col">
+                  <p class="text-[#c5c5c5] font-medium ml-5 mt-4">Current School Year</p>
+                  <p class="font-bold text-3xl ml-5">2025-2026</p>
+                </div>
+                    <div class="col-start-2 col-end-3 row-start-2 row-end-3 h-25 border shadow flex flex-col">
+                      <p class="text-[#c5c5c5] font-medium ml-5 mt-4">Current Balance:</p>
+                      <p class="font-bold text-3xl ml-5">0.00 PH</p>
+                    </div>
+                      <div class="col-start-1 col-end-3 row-start-2 row-end-4 h-60 border shadow mt-[8rem]">
+                        <p class="my-2 ml-5 text-[20px] font-bold">DELA CRUZ, JUAN P.</p>
+                        <hr class="border-[#e7e7e7]">
+                          <div class="mt-6 ml-6">
+                            <p class="text-[#c5c5c5]">Student Number:</p>
+                            <p class="text-[17px] font-semibold">1234567890</p>
+                          </div>
+                            <div class="mt-6 ml-6">
+                              <p class="text-[#c5c5c5]">Email:</p>
+                              <p class="text-[17px] font-semibold">delacruz@smacbacoor.ph.education</p>
+                            </div>
+                      </div>
+                      <div class="col-start-3 col-end-5 row-start-1 row-end-4 border shadow flex items-center">
+                        <p class="ml-5">announcements</p>
+                      </div>
         </main>
     </div>
   </div>
