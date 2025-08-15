@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="input.css">
+    <link href="./output.css" rel="stylesheet">
+    <title>Grades</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/forFunction.js"></script>
+</head>
+<body class="m-0 p-0">
+  <div id="sidebar"
+       class="fixed top-0 left-0 h-screen bg-[#013169] overflow-hidden w-[280px] z-30 transition-all duration-300 ease-in-out">
+    <div class="flex justify-center items-center p-3 mt-1">
+      <img src="images/schoolLogo.PNG" class="h-12 w-12 object-contain ml-1" alt="School Logo">
+      <p class="text-white font-bold text-[20px] leading-none ml-1 whitespace-nowrap text-fade">STUDENT PORTAL</p>
+    </div>
+    <hr class="border-[#4b608e] mt-1">
+    <ul class="text-white text-[16px] font-light list-none p-0">
+      <li class="my-2 mt-5">
+        <a href="landingPage.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+          <i class="fa-solid fa-chart-line mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="whitespace-nowrap text-fade">Dashboard</span>
+        </a>
+      </li>
+      <li class="my-2">
+        <a href="userProfile.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+          <i class="fa-solid fa-user mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="whitespace-nowrap text-fade">Subjects</span>
+        </a>
+      </li>
+      <li class="my-2">
+        <div class="cursor-pointer flex items-center hover:bg-[#496592] py-2 mx-2 rounded transition-colors duration-300"
+             onclick="toggleFolder('about')">
+          <i class="fa-solid fa-chart-column mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="my-1 text-[16px] whitespace-nowrap text-fade">Academic Record</span>
+          <i id="arrow-about" class="fa-solid fa-angle-down text-[14px] ml-5 arrow-transition"></i>
+        </div>
+        <div id="about" class="ml-15 mt-2 text-[14px] dropdown-transition overflow-hidden">
+          <ul class="space-y-3 list-none p-0">
+            <li>
+              <a href="subjectsPage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Subjects</a>
+            </li>
+            <li>
+              <a href="gradesPage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Grades</a>
+            </li>
+            <li>
+              <a href="balancePage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Balance</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="my-2">
+        <a href="announcementPage.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+          <i class="fa-solid fa-bullhorn mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="whitespace-nowrap text-fade">Announcements</span>
+        </a>
+      </li>
+      <li class="my-2">
+        <a href="index.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+          <i class="fa-solid fa-right-from-bracket mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
+          <span class="whitespace-nowrap text-fade">Sign Out</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <nav id="navbar"
+       class="fixed top-0 left-[280px] w-[calc(100%-280px)] h-10 bg-[#f5f5f5] shadow flex items-center z-20 transition-all duration-300 ease-in-out">
+    <button onclick="toggleSidebar()"
+            class="bg-transparent border-none text-[20px] ml-3 cursor-pointer px-2 rounded hover:bg-gray-200 transition-colors duration-300">
+      <i class="fa-solid fa-bars text-gray-400"></i>
+    </button>
+    <p class="text-gray-600 font-bold ml-3">Grades</p>  
+  </nav>
+  <main id="main-content" class="transition-all duration-300 ease-in-out pt-12 ml-[280px]">
+    <div class="p-6 mx-4 mt-4 mb-5 shadow-md rounded-b-lg rounded-t-lg border">
+      <button class="py-2 px-4 bg-gray-200 mb-5 rounded border active:translate-y-[1px] active:scale-[0.98] transition-all duration-100 ease-in-out">
+        <i class="fa-solid fa-download"></i>
+        <span class="font-semibold">Download</span>
+      </button>
+        <div class="overflow-x-auto">
+            <table class="table-auto border border-gray-300 w-full text-left">
+                <thead>
+                  <tr class="bg-blue-100">
+                    <th colspan="4" class="border border-gray-300 px-4 py-2 text-center">FIRST SEMESTER 2025-2026</th>
+                  </tr>
+                  <tr class="bg-gray-100">
+                    <th class="border border-gray-300 px-4 py-2 text-center w-200">Subjects</th>
+                    <th class="border border-gray-300 px-4 py-2 text-center leading-3.5">1st Quarter</th>
+                    <th class="border border-gray-300 px-4 py-2 text-center leading-3.5">2nd Quarter</th>
+                    <th class="border border-gray-300 px-4 py-2 text-center leading-3.5">Semester Final Grade</th>
+                  </tr>
+                  <tr class="bg-gray-100">
+                    <th colspan="4" class="border border-gray-300 px-4 py-2">Core Subjects</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-7 py-2">Contemporary Philippine Arts from the Regions</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-7 py-2">Understanding Cultures, Society, and Politics</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-7 py-2">Physical Education and Health 3</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    </tr>
+                </tbody>
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th colspan="4" class="border border-gray-300 px-4 py-2">Contextualized Subjects</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-7 py-2">Filipino sa Piling Larang</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-7 py-2">Practical Research 2</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-7 py-2">English for Academic and Professional Purposes</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    </tr>
+                  </tbody>
+                    <thead>
+                      <tr class="bg-gray-100">
+                        <th colspan="4" class="border border-gray-300 px-4 py-2">Specialized Subjects</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="bg-gray-50">
+                        <td class="border border-gray-300 px-7 py-2">Computer Programming (.NET Technology) NC III</td>
+                        <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                        <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                        <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      </tr>
+                    </tbody>
+                      <thead>
+                        <tr class="bg-gray-100">
+                          <th colspan="3" class="border border-gray-300 px-4 py-2 text-right">General Average for the Semester:</th>
+                          <td class="border border-gray-300 px-7 py-2 text-center font-bold">0</td>
+                        </tr>
+                      </thead>
+            </table>
+        </div>
+    </div>
+      <div class="p-6 mx-4 mt-4 mb-5 shadow-md rounded-b-lg rounded-t-lg border">
+        <button class="py-2 px-4 bg-gray-200 mb-5 rounded border active:translate-y-[1px] active:scale-[0.98] transition-all duration-100 ease-in-out">
+          <i class="fa-solid fa-download"></i>
+          <span class="font-semibold">Download</span>
+        </button>
+        <div class="overflow-x-auto">
+          <table class="table-auto  border border-gray-300 w-full text-left">
+              <thead>
+                <tr class="bg-blue-100">
+                  <th colspan="4" class="border border-gray-300 px-4 py-2 text-center">SECOND SEMESTER 2025-2026</th>
+                </tr>
+                <tr class="bg-gray-100">
+                  <th class="border border-gray-300 px-4 py-2 text-center w-200">Subjects</th>
+                  <th class="border border-gray-300 px-4 py-2 text-center leading-3.5">1st Quarter</th>
+                  <th class="border border-gray-300 px-4 py-2 text-center leading-3.5">2nd Quarter</th>
+                  <th class="border border-gray-300 px-4 py-2 text-center leading-3.5">Semester Final Grade</th>
+                </tr>
+                <tr class="bg-gray-100">
+                  <th colspan="4" class="border border-gray-300 px-4 py-2">Core Subjects</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 px-7 py-2">Media and Information Literacy</td>
+                  <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                  <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                  <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 px-7 py-2">21st Century from the Philippines and the World</td>
+                  <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                  <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                  <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                </tr>
+                <tr class="bg-gray-50">
+                  <td class="border border-gray-300 px-7 py-2">Physical Education and Health 4</td>
+                  <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                  <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                  <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                </tr>
+              </tbody>
+                <thead>
+                  <tr class="bg-gray-100">
+                    <th colspan="4" class="border border-gray-300 px-4 py-2">Contextualized Subjects</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-7 py-2">Inquiries, Investigations and Immersion</td>
+                    <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                  </tr>
+                  <tr class="bg-gray-50">
+                    <td class="border border-gray-300 px-7 py-2">Entrepreneurship</td>
+                    <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                  </tr>
+                </tbody>
+                  <thead>
+                    <tr class="bg-gray-100">
+                      <th colspan="4" class="border border-gray-300 px-4 py-2">Specialized Subjects</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-7 py-2">Computer Programming (.NET Technology) NC III</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    </tr>
+                    <tr class="bg-gray-50">
+                      <td class="border border-gray-300 px-7 py-2">Culminating Activity/Work Immersion</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                      <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    </tr>
+                  </tbody>
+                    <thead>
+                      <tr class="bg-gray-100">
+                        <th colspan="3" class="border border-gray-300 px-4 py-2 text-right">General Average for the Semester:</th>
+                        <td class="border border-gray-300 px-7 py-2 text-center font-bold">0</td>
+                      </tr>
+                    </thead>
+          </table>
+        </div>
+      </div>
+  </main>
+</body>
+</html>

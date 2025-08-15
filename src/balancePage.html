@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="input.css">
     <link href="./output.css" rel="stylesheet">
-    <title>Grades</title>
+    <title>Balance</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/forFunction.js"></script>
 </head>
@@ -41,19 +41,19 @@
         <div id="about" class="ml-15 mt-2 text-[14px] dropdown-transition overflow-hidden">
           <ul class="space-y-3 list-none p-0">
             <li>
-              <a href="subjects.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Subjects</a>
+              <a href="subjectsPage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Subjects</a>
             </li>
             <li>
-              <a href="grades.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Grades</a>
+              <a href="gradesPage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Grades</a>
             </li>
             <li>
-              <a href="" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Balance</a>
+              <a href="balancePage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Balance</a>
             </li>
           </ul>
         </div>
       </li>
       <li class="my-2">
-        <a href="" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+        <a href="announcementPage.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
           <i class="fa-solid fa-bullhorn mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="whitespace-nowrap text-fade">Announcements</span>
         </a>
@@ -72,7 +72,7 @@
             class="bg-transparent border-none text-[20px] ml-3 cursor-pointer px-2 rounded hover:bg-gray-200 transition-colors duration-300">
       <i class="fa-solid fa-bars text-gray-400"></i>
     </button>
-    <p class="text-gray-600 font-bold ml-3">Grades</p>  
+    <p class="text-gray-600 font-bold ml-3">Balance</p>  
   </nav>
   <main id="main-content" class="transition-all duration-300 ease-in-out pt-12 ml-[280px]">
     <div class="p-6 mx-4 mt-4 mb-5 shadow-md rounded-b-lg rounded-t-lg border">
@@ -80,57 +80,31 @@
             <table class="table-auto  border border-gray-300 w-full text-left">
                 <thead>
                     <tr class="bg-blue-100">
-                        <th colspan="4" class="border border-gray-300 px-4 py-2 text-center">FIRST SEMESTER 2025-2026</th>
+                        <th colspan="4" class="border border-gray-300 px-4 py-2 text-center">ACCOUNT BALANCE</th>
                     </tr>
-                    <tr class="bg-gray-100">
-                        <th class="border border-gray-300 px-4 py-2 text-center w-200">Subjects</th>
-                        <th class="border border-gray-300 px-4 py-2 text-center">1st Quarter</th>
-                        <th class="border border-gray-300 px-4 py-2 text-center">2nd Quarter</th>
-                        <th class="border border-gray-300 px-4 py-2 text-center">Semester Final Grade</th>
-                    </tr>
-                    <tr class="bg-gray-100">
-                        <th colspan="4" class="border border-gray-300 px-4 py-2">Core Subjects</th>
+                    <tr class="bg-gray-100 text-center">
+                        <th class="border border-gray-300 px-4 py-2 w-100">Item</th>
+                        <th class="border border-gray-300 px-4 py-2">Date Uploaded</th>
+                        <th class="border border-gray-300 px-4 py-2">Total Fee</th>
+                        <th class="border border-gray-300 px-4 py-2">Status</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-gray-50">
-                            <td class="border border-gray-300 px-7 py-2">Filipino sa Piling Larang</td>
-                            <td class="border border-gray-300 px-7 py-2 text-center">0</td>
-                            <td class="border border-gray-300 px-7 py-2 text-center">0</td>
-                            <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    <tr class="bg-gray-50 text-center">
+                        <td class="border border-gray-300 px-7 py-2">Uniform Set</td>
+                        <td class="border border-gray-300 px-7 py-2">July 28, 2025</td>
+                        <td class="border border-gray-300 px-7 py-2">₱1,100.00</td>
+                        <td class="border border-gray-300 px-7 py-2 text-green-500 font-bold">Paid</td>
                     </tr>
-                    <tr class="bg-gray-50">
-                        <td class="border border-gray-300 px-7 py-2">Practical Research 2</td>
-                        <td class="border border-gray-300 px-7 py-2 text-center">0</td>
-                        <td class="border border-gray-300 px-7 py-2 text-center">0</td>
-                        <td class="border border-gray-300 px-7 py-2 text-center">0</td>
-                    </tr>
-                    <tr class="bg-gray-50">
-                        <td class="border border-gray-300 px-7 py-2">English for Academic and Professional Purposes</td>
-                        <td class="border border-gray-300 px-7 py-2 text-center">0</td>
-                        <td class="border border-gray-300 px-7 py-2 text-center">0</td>
-                        <td class="border border-gray-300 px-7 py-2 text-center">0</td>
+                    <tr class="bg-gray-50 text-center">
+                        <td class="border border-gray-300 px-7 py-2">School ID</td>
+                        <td class="border border-gray-300 px-7 py-2">August 14, 2025</td>
+                        <td class="border border-gray-300 px-7 py-2">₱75.00</td>
+                        <td class="border border-gray-300 px-7 py-2 text-red-500 font-bold">Not paid</td>
                     </tr>
                 </tbody>
-
             </table>
         </div>
-            <div class="overflow-x-auto mt-[3rem]">
-                <table class="table-auto  border border-gray-300 w-full text-left">
-                    <thead>
-                        <tr class="bg-blue-100">
-                            <th class="border border-gray-300 px-4 py-2 text-center">SECOND SEMESTER 2025-2026</th>
-                        </tr>
-                        <tr class="bg-gray-100">
-                            <th class="border border-gray-300 px-4 py-2">Core Subjects</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                        
-                </table>
-            </div>
     </div>
   </main>
 </body>
