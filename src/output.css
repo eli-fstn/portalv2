@@ -258,6 +258,9 @@
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
@@ -281,6 +284,9 @@
   }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -321,11 +327,11 @@
   .table {
     display: table;
   }
-  .h-5 {
-    height: calc(var(--spacing) * 5);
-  }
   .h-7 {
     height: calc(var(--spacing) * 7);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -345,14 +351,11 @@
   .h-60 {
     height: calc(var(--spacing) * 60);
   }
-  .h-\[350px\] {
-    height: 350px;
-  }
   .h-\[380px\] {
     height: 380px;
   }
-  .h-full {
-    height: 100%;
+  .h-\[400px\] {
+    height: 400px;
   }
   .h-screen {
     height: 100vh;
@@ -378,8 +381,11 @@
   .w-\[320px\] {
     width: 320px;
   }
-  .w-\[380px\] {
-    width: 380px;
+  .w-\[330px\] {
+    width: 330px;
+  }
+  .w-\[350px\] {
+    width: 350px;
   }
   .w-\[calc\(100\%-280px\)\] {
     width: calc(100% - 280px);
@@ -434,6 +440,13 @@
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
+  }
+  .space-y-1 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .space-y-3 {
     :where(& > :not(:last-child)) {
@@ -513,8 +526,8 @@
   .bg-transparent {
     background-color: transparent;
   }
-  .bg-white {
-    background-color: var(--color-white);
+  .bg-\[url\(\'images\/SchoolBackground\.png\'\)\] {
+    background-image: url('images/SchoolBackground.png');
   }
   .bg-cover {
     background-size: cover;
@@ -524,9 +537,6 @@
   }
   .object-contain {
     object-fit: contain;
-  }
-  .object-cover {
-    object-fit: cover;
   }
   .p-0 {
     padding: calc(var(--spacing) * 0);
@@ -539,12 +549,6 @@
   }
   .p-6 {
     padding: calc(var(--spacing) * 6);
-  }
-  .px-0 {
-    padding-inline: calc(var(--spacing) * 0);
-  }
-  .px-0\.5 {
-    padding-inline: calc(var(--spacing) * 0.5);
   }
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
@@ -563,9 +567,6 @@
   }
   .py-0 {
     padding-block: calc(var(--spacing) * 0);
-  }
-  .py-0\.5 {
-    padding-block: calc(var(--spacing) * 0.5);
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
@@ -607,9 +608,6 @@
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
-  .text-\[12px\] {
-    font-size: 12px;
   }
   .text-\[13px\] {
     font-size: 13px;
@@ -797,149 +795,9 @@
       scale: 0.98;
     }
   }
-  .cp\:mt-1 {
-    @media (width >= 100px) {
-      margin-top: calc(var(--spacing) * 1);
-    }
-  }
-  .cp\:hidden {
-    @media (width >= 100px) {
-      display: none;
-    }
-  }
-  .cp\:h-5 {
-    @media (width >= 100px) {
-      height: calc(var(--spacing) * 5);
-    }
-  }
-  .cp\:h-10 {
-    @media (width >= 100px) {
-      height: calc(var(--spacing) * 10);
-    }
-  }
-  .cp\:h-12 {
-    @media (width >= 100px) {
-      height: calc(var(--spacing) * 12);
-    }
-  }
-  .cp\:h-\[280px\] {
-    @media (width >= 100px) {
-      height: 280px;
-    }
-  }
-  .cp\:h-\[320px\] {
-    @media (width >= 100px) {
-      height: 320px;
-    }
-  }
-  .cp\:h-\[350px\] {
-    @media (width >= 100px) {
-      height: 350px;
-    }
-  }
-  .cp\:w-\[220px\] {
-    @media (width >= 100px) {
-      width: 220px;
-    }
-  }
-  .cp\:w-\[250px\] {
-    @media (width >= 100px) {
-      width: 250px;
-    }
-  }
-  .cp\:w-\[280px\] {
-    @media (width >= 100px) {
-      width: 280px;
-    }
-  }
   .cp\:bg-white {
-    @media (width >= 100px) {
+    @media (width >= 300px) {
       background-color: var(--color-white);
-    }
-  }
-  .cp\:p-3 {
-    @media (width >= 100px) {
-      padding: calc(var(--spacing) * 3);
-    }
-  }
-  .cp\:p-5 {
-    @media (width >= 100px) {
-      padding: calc(var(--spacing) * 5);
-    }
-  }
-  .cp\:px-0\.5 {
-    @media (width >= 100px) {
-      padding-inline: calc(var(--spacing) * 0.5);
-    }
-  }
-  .cp\:py-0 {
-    @media (width >= 100px) {
-      padding-block: calc(var(--spacing) * 0);
-    }
-  }
-  .cp\:py-0\.5 {
-    @media (width >= 100px) {
-      padding-block: calc(var(--spacing) * 0.5);
-    }
-  }
-  .cp\:text-\[12px\] {
-    @media (width >= 100px) {
-      font-size: 12px;
-    }
-  }
-  .tablet\:mt-1 {
-    @media (width >= 768px) {
-      margin-top: calc(var(--spacing) * 1);
-    }
-  }
-  .tablet\:mt-2 {
-    @media (width >= 768px) {
-      margin-top: calc(var(--spacing) * 2);
-    }
-  }
-  .tablet\:mt-3 {
-    @media (width >= 768px) {
-      margin-top: calc(var(--spacing) * 3);
-    }
-  }
-  .tablet\:mt-4 {
-    @media (width >= 768px) {
-      margin-top: calc(var(--spacing) * 4);
-    }
-  }
-  .tablet\:mb-\[10px\] {
-    @media (width >= 768px) {
-      margin-bottom: 10px;
-    }
-  }
-  .tablet\:block {
-    @media (width >= 768px) {
-      display: block;
-    }
-  }
-  .tablet\:h-5 {
-    @media (width >= 768px) {
-      height: calc(var(--spacing) * 5);
-    }
-  }
-  .tablet\:h-7 {
-    @media (width >= 768px) {
-      height: calc(var(--spacing) * 7);
-    }
-  }
-  .tablet\:h-17 {
-    @media (width >= 768px) {
-      height: calc(var(--spacing) * 17);
-    }
-  }
-  .tablet\:h-\[380px\] {
-    @media (width >= 768px) {
-      height: 380px;
-    }
-  }
-  .tablet\:w-\[320px\] {
-    @media (width >= 768px) {
-      width: 320px;
     }
   }
   .tablet\:bg-\[url\(\'images\/SchoolBackground\.png\'\)\] {
@@ -947,89 +805,14 @@
       background-image: url('images/SchoolBackground.png');
     }
   }
-  .tablet\:p-5 {
-    @media (width >= 768px) {
-      padding: calc(var(--spacing) * 5);
-    }
-  }
-  .tablet\:px-0\.5 {
-    @media (width >= 768px) {
-      padding-inline: calc(var(--spacing) * 0.5);
-    }
-  }
-  .tablet\:px-1 {
-    @media (width >= 768px) {
-      padding-inline: calc(var(--spacing) * 1);
-    }
-  }
-  .tablet\:py-0 {
-    @media (width >= 768px) {
-      padding-block: calc(var(--spacing) * 0);
-    }
-  }
-  .tablet\:py-0\.5 {
-    @media (width >= 768px) {
-      padding-block: calc(var(--spacing) * 0.5);
-    }
-  }
-  .tablet\:py-1 {
-    @media (width >= 768px) {
-      padding-block: calc(var(--spacing) * 1);
-    }
-  }
-  .tablet\:text-\[12px\] {
-    @media (width >= 768px) {
-      font-size: 12px;
-    }
-  }
-  .tablet\:text-\[13px\] {
-    @media (width >= 768px) {
-      font-size: 13px;
-    }
-  }
-  .tablet\:text-\[14px\] {
-    @media (width >= 768px) {
-      font-size: 14px;
-    }
-  }
-  .tablet\:text-\[15px\] {
-    @media (width >= 768px) {
-      font-size: 15px;
-    }
-  }
-  .laptop\:mt-1\.5 {
-    @media (width >= 992px) {
-      margin-top: calc(var(--spacing) * 1.5);
-    }
-  }
   .laptop\:mt-2 {
     @media (width >= 992px) {
       margin-top: calc(var(--spacing) * 2);
     }
   }
-  .laptop\:mt-3 {
-    @media (width >= 992px) {
-      margin-top: calc(var(--spacing) * 3);
-    }
-  }
-  .laptop\:mt-4 {
-    @media (width >= 992px) {
-      margin-top: calc(var(--spacing) * 4);
-    }
-  }
-  .laptop\:mt-5 {
-    @media (width >= 992px) {
-      margin-top: calc(var(--spacing) * 5);
-    }
-  }
   .laptop\:mt-7 {
     @media (width >= 992px) {
       margin-top: calc(var(--spacing) * 7);
-    }
-  }
-  .laptop\:block {
-    @media (width >= 992px) {
-      display: block;
     }
   }
   .laptop\:h-10 {
@@ -1080,11 +863,6 @@
   .laptop\:py-1\.5 {
     @media (width >= 992px) {
       padding-block: calc(var(--spacing) * 1.5);
-    }
-  }
-  .laptop\:text-\[14px\] {
-    @media (width >= 992px) {
-      font-size: 14px;
     }
   }
   .laptop\:text-\[15px\] {
