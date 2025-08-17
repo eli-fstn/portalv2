@@ -67,16 +67,23 @@
     </ul>
   </div>
   <nav id="navbar" class="fixed top-0 left-[280px] w-[calc(100%-280px)] h-10 bg-[#f5f5f5] shadow flex items-center z-20 transition-all duration-300 ease-in-out">
-    <button onclick="toggleSidebar()"
-            class="bg-transparent border-none text-[20px] ml-3 cursor-pointer px-2 rounded hover:bg-gray-200 transition-colors duration-300">
+    <button onclick="toggleSidebar()" class="bg-transparent border-none text-[20px] ml-3 cursor-pointer px-2 rounded hover:bg-gray-200 transition-colors duration-300">
       <i class="fa-solid fa-bars text-gray-400"></i>
     </button>
     <p class="text-gray-600 font-bold ml-3">Dashboard</p>  
   </nav>
 
       <!-- Main Content -->
-        <main id="main-content" class="transition-all duration-300 ease-in-out pt-12 ml-[280px]">
+        <main id="main-content" class="transition-all duration-300 ease-in-out pt-12 ml-[280px] h-screen w-screen">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 p-4 h-full w-full">
+            <div class="bg-blue-500 text-white text-center rounded col-span-2">Item 1</div>
+            <div class="bg-green-500 text-white text-center rounded row md:row-span-3 md:col-start-3 row-start-4 sm:col-span-2">Item 2</div>
+            <div class="bg-red-500 text-white text-center w-full rounded ">Item 3</div>
+            <div class="bg-yellow-500 text-white text-center w-full rounded ">Item 4</div>
+            <div class="bg-yellow-500 text-white text-center rounded col-span-2">Item 5</div>
+          </div>
         </main>
+
     </div>
   </div>
 </body>
