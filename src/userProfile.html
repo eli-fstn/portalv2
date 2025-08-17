@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="input.css">
     <link href="./output.css" rel="stylesheet">
     <title>My Profile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/forFunction.js"></script>
 </head>
 <body class="m-0 p-0">
@@ -76,82 +74,114 @@
   </nav>
   <main id="main-content" class="transition-all duration-300 ease-in-out pt-12 ml-[280px]">
     <div class="p-6 mx-4 mt-4 shadow-md rounded-b-lg rounded-t-lg border">
-      <p class="text-school-text text-[23px] font-bold">Personal Info</p>
-      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
-        <p>Given Name</p>
-        <p>Middle Name</p>
-        <p>Surname</p>
-        <p>Suffix</p>
+      <p class="text-school-text text-[19px] font-bold tablet:text-[23px]">Personal Info</p>
+      <div class="grid grid-cols-2 md:grid-cols-4">
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[14px] tablet:text-[15px] font-bold text-[#a6a7a8]">Given Name</p> 
+          <span class="text-[15px] tablet:text-[18px] font-medium pt-1 pb-8">Juan</span>
+        </div>
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Middle Name</p>
+          <span class="text-[18px] font-medium pt-1 pb-8">Pancho</span>
+        </div>
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Surname</p>
+          <span class="text-[18px] font-medium pt-1 pb-8">Dela Cruz</span>
+        </div>
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Suffix</p>
+          <span class="italic text-[18px] font-medium pt-1 pb-8">Not Available</span>
+        </div>
       </div>
-      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
-        <p>Juan</p>
-        <p>Pancho</p>
-        <p>Dela Cruz</p>
-        <i>Not Available</i>
-      </div>
-      <div class="grid grid-cols-4 text-[15px] font-bold text-[#a6a7a8]">
-        <p>Sex at birth</p>
-        <p>Nationality</p>
-        <p>Date at birth</p>
-        <p>Civil Status</p>
-      </div>
-      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
-        <p>Male</p>
-        <p>Filipino</p>
-        <p>December 12, 2006</p>
-        <p>Single</p>
-      </div>
-      <div class="grid grid-cols-4 text-[15px] font-bold text-[#a6a7a8]">
-        <p>Religion</p>
-        <p>Contact Number</p>
-      </div>
-      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
-        <p>Catholic</p>
-        <p>09123456789</p>
-      </div>
+        <div class="grid grid-cols-2 md:grid-cols-4">
+          <div class="my-2 break-words">
+            <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Sex at birth</p> 
+            <span class="text-[18px] font-medium pt-1 pb-8">Male</span>
+          </div>
+          <div class="my-2 break-words">
+            <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Nationality</p>
+            <span class="text-[18px] font-medium pt-1 pb-8">Filipino</span>
+          </div>
+          <div class="my-2 break-words">
+            <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Date of Birth</p>
+            <span class="text-[18px] font-medium pt-1 pb-8">December 12, 2003</span>
+          </div>
+          <div class="my-2 break-words">
+            <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Place of Birth</p>
+            <span class="text-[18px] font-medium pt-1 pb-8">Tondo, Manila</span>
+          </div>
+        </div>
+          <div class="grid grid-cols-2 md:grid-cols-4">
+              <div class="my-2 break-words">
+                <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Civil Status</p> 
+                <span class="text-[18px] font-medium pt-1 pb-8">Single</span>
+              </div>
+              <div class="my-2 break-words">
+                <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Contact Number</p>
+                <span class="text-[18px] font-medium pt-1 pb-8">09123456789</span>
+              </div>
+              <div class="my-2 break-words">
+                <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Religion</p>
+                <span class="text-[18px] font-medium pt-1 pb-8">Catholic</span>
+              </div>
+            </div>
     </div>
     <div class="mb-8 p-6 mx-4 mt-4 shadow-md rounded-b-lg rounded-t-lg border">
       <p class="text-school-text text-[23px] font-bold">Residential Address</p>
-      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
-        <p>Street/Subdivision</p>
-        <p>Region</p>
-        <p>Province</p>
-        <p>Municipality</p>
+      <div class="grid grid-cols-2 md:grid-cols-4">
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">House Number</p> 
+          <span class="text-[18px] font-medium pt-1 pb-8">45</span>
+        </div>
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Street/Subdivision</p>
+          <span class="text-[18px] font-medium pt-1 pb-8">11th</span>
+        </div>
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Region</p>
+          <span class="text-[18px] font-medium pt-1 pb-8">Region IV-A (CALABARZON)</span>
+        </div>
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Province</p>
+          <span class="text-[18px] font-medium pt-1 pb-8">Cavite</span>
+        </div>
       </div>
-      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
-        <p>Sampaloc Street, Meadowood Executive Village</p>
-        <p>Region IV-A (CALABARZON)</p>
-        <p>Cavite</p>
-        <p>City of Bacoor</p>
-      </div>
-      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
-        <p>Barangay</p>
-        <p>Zip Code</p>
-      </div>
-      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
-        <p>P.F Espiritu VIII</p>
-        <p>4102</p>
-      </div>
+        <div class="grid grid-cols-2 md:grid-cols-4">
+          <div class="my-2 break-words">
+            <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Municipality</p> 
+            <span class="text-[18px] font-medium pt-1 pb-8">City of Bacoor</span>
+          </div>
+          <div class="my-2 break-words">
+            <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Barangay</p>
+            <span class="text-[18px] font-medium pt-1 pb-8">P.F Espiritu IV</span>
+          </div>
+        </div>
     </div>
     <div class="p-6 mx-4 mt-4 mb-5 shadow-md rounded-b-lg rounded-t-lg border">
       <p class="text-school-text text-[23px] font-bold">School Information</p>
-      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
-        <p>Level</p>
-        <p>Section/Strand</p>
-        <p>Student Number</p>
-        <p>LRN</p>
+      <div class="grid grid-cols-2 md:grid-cols-4">
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Level</p> 
+          <span class="text-[18px] font-medium pt-1 pb-8">Grade 12</span>
+        </div>
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Section/Strand</p>
+          <span class="text-[18px] font-medium pt-1 pb-8">TVL-ICT A (Ezra)</span>
+        </div>
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Student Number</p>
+          <span class="text-[18px] font-medium pt-1 pb-8">1234567890</span>
+        </div>
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">LRN</p>
+          <span class="text-[18px] font-medium pt-1 pb-8">197230157230</span>
+        </div>
       </div>
-      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
-        <p>Grade 12</p>
-        <p>TVL - ICT A (Ezra)</p>
-        <p>1234567890</p>
-        <p>197230157230</p>
-      </div>
-      <div class="grid grid-cols-4 pt-6 text-[15px] font-bold text-[#a6a7a8]">
-        <p>Class Adviser</p>
-      </div>
-      <div class="grid grid-cols-4 text-[18px] font-medium pt-1 pb-8">
-        <p>Mr. Lewis Hamilton</p>
+      <div class="grid grid-cols-2 md:grid-cols-4">
+        <div class="my-2 break-words">
+          <p class="pt-6 text-[15px] font-bold text-[#a6a7a8]">Class Adviser</p> 
+          <span class="text-[18px] font-medium pt-1 pb-8">Mr. Dwight Ramos</span>
+        </div>
       </div>
     </div>
   </main>
