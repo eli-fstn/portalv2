@@ -75,11 +75,11 @@
 
       <!-- Main Content -->
         <main id="main-content" class="transition-all duration-300 ease-in-out pt-12 ml-[280px] h-screen w-screen">
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 p-4 h-full w-full">
+          <div class="grid grid-cols-1 md:grid-rows-[1fr_0.7fr_1fr] sm:grid-cols-2 md:grid-cols-3 gap-3 p-4 h-full w-full">
             <div class="bg-blue-500 text-white text-center rounded col-span-2">Item 1</div>
-            <div class="bg-green-500 text-white text-center rounded row md:row-span-3 md:col-start-3 row-start-4 sm:col-span-2">Item 2</div>
-            <div class="bg-red-500 text-white text-center w-full rounded ">Item 3</div>
-            <div class="bg-yellow-500 text-white text-center w-full rounded ">Item 4</div>
+            <div class="bg-green-500 text-white text-center rounded row cp:col-span-2 md:row-span-3 md:col-start-3 row-start-5 sm:row-start-4 sm:col-span-2">Item 2</div>
+            <div class="bg-red-500 text-white text-center w-full rounded cp:col-span-2 sm:col-span-1">Item 3</div>
+            <div class="bg-yellow-500 text-white text-center w-full rounded cp:col-span-2 cp:row-start-3 sm:col-span-1 sm:col-start-2 sm:row-start-2 ">Item 4</div>
             <div class="bg-yellow-500 text-white text-center rounded col-span-2">Item 5</div>
           </div>
         </main>
