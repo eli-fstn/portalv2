@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./output.css" rel="stylesheet">
-    <title>Grades</title>
+    <title>SMAC Student Portal: Grades</title>
     <script src="js/forFunction.js"></script>
 </head>
 <body class="m-0 p-0">
@@ -65,6 +65,8 @@
       </li>
     </ul>
   </div>
+
+  <!-- Navbar -->
   <nav id="navbar"
        class="fixed top-0 left-[280px] w-[calc(100%-280px)] h-10 bg-[#f5f5f5] shadow flex items-center z-20 transition-all duration-300 ease-in-out">
     <button onclick="toggleSidebar()"
@@ -73,7 +75,11 @@
     </button>
     <p class="text-gray-600 font-bold ml-3">Grades</p>  
   </nav>
+
+  <!-- Content -->
   <main id="main-content" class="transition-all duration-300 ease-in-out pt-12 ml-[280px]">
+
+    <!-- First Semester Grades -->
     <div class="p-6 mx-4 mt-4 mb-5 shadow-md rounded-b-lg rounded-t-lg border-gray-300 border-1">
       <button class="py-1 tablet:py-2 px-4 bg-gray-200 mb-5 rounded border-gray-300 border-1 active:translate-y-[1px] active:scale-[0.98] transition-all duration-100 ease-in-out">
         <i class="fa-solid fa-download text-[14px] tablet:text-[16px]"></i>
@@ -162,6 +168,8 @@
             </table>
         </div>
     </div>
+
+    <!-- Second Semester Grades -->
       <div class="p-6 mx-4 mt-4 mb-5 shadow-md rounded-b-lg rounded-t-lg border-gray-300 border-1">
         <button class="py-1 tablet:py-2 px-4 bg-gray-200 mb-5 rounded border-gray-300 border-1 active:translate-y-[1px] active:scale-[0.98] transition-all duration-100 ease-in-out">
           <i class="fa-solid fa-download text-[14px] tablet:text-[16px]"></i>
@@ -251,6 +259,8 @@
         </div>
       </div>
   </main>
+
+  <!-- Footer -->
     <footer class="mt-[5rem]">
       <div class="border-gray-300 border-1 h-15 tablet:h-20 flex items-center justify-center">
         <p class="font-semibold text-[13px] tablet:text-[16px]">2025 | St. Matthew Academy of Cavite - Student Portal</p>
