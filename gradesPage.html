@@ -9,28 +9,29 @@
     <script src="js/forFunction.js"></script>
 </head>
 <body class="m-0 p-0">
-  <div id="sidebar"
-       class="fixed top-0 left-0 h-screen bg-[#013169] overflow-hidden w-[280px] z-30 transition-all duration-300 ease-in-out">
-    <div class="flex justify-center items-center p-3 mt-1">
-      <img src="images/schoolLogo.PNG" class="h-12 w-12 object-contain ml-1" alt="School Logo">
-      <p class="text-white font-bold text-[20px] leading-none ml-1 whitespace-nowrap text-fade">STUDENT PORTAL</p>
-    </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed top-0 left-0 h-screen bg-[#013169] overflow-hidden w-[280px] z-30 transition-all duration-300 ease-in-out">
+    <div class="flex tablet:justify-center items-center p-3 mt-1">
+        <img src="images/schoolLogo.PNG" class="h-12 w-12 object-contain tablet:ml-1" alt="School Logo">
+        <p class="text-white font-bold text-[20px] leading-none ml-1 whitespace-nowrap text-fade">STUDENT PORTAL</p>
+      </div>
     <hr class="border-[#4b608e] mt-1">
     <ul class="text-white text-[16px] font-light list-none p-0">
       <li class="my-2 mt-5">
-        <a href="landingPage.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+        <a href="landingPage.html" class="flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
           <i class="fa-solid fa-chart-line mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="whitespace-nowrap text-fade">Dashboard</span>
         </a>
       </li>
       <li class="my-2">
-        <a href="userProfile.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+        <a href="userProfile.html" class="flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
           <i class="fa-solid fa-user mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="whitespace-nowrap text-fade">My Profile</span>
         </a>
       </li>
       <li class="my-2">
-        <div class="cursor-pointer flex items-center hover:bg-[#496592] py-2 mx-2 rounded transition-colors duration-300"
+        <div class="cursor-pointer flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded transition-colors duration-300"
              onclick="toggleFolder('about')">
           <i class="fa-solid fa-chart-column mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="my-1 text-[16px] whitespace-nowrap text-fade">Academic Record</span>
@@ -39,25 +40,25 @@
         <div id="about" class="ml-15 mt-2 text-[14px] dropdown-transition overflow-hidden">
           <ul class="space-y-3 list-none p-0">
             <li>
-              <a href="subjectsPage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Subjects</a>
+              <a href="subjectsPage.html" class="block hover:bg-[#496592] px-5 py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Subjects</a>
             </li>
             <li>
-              <a href="gradesPage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Grades</a>
+              <a href="gradesPage.html" class="block hover:bg-[#496592] px-5 py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Grades</a>
             </li>
             <li>
-              <a href="balancePage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Balance</a>
+              <a href="balancePage.html" class="block hover:bg-[#496592] px-5 py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Balance</a>
             </li>
           </ul>
         </div>
       </li>
       <li class="my-2">
-        <a href="announcementPage.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+        <a href="announcementPage.html" class="flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
           <i class="fa-solid fa-bullhorn mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="whitespace-nowrap text-fade">Announcements</span>
         </a>
       </li>
       <li class="my-2">
-        <a href="index.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+        <a href="index.html" class="flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
           <i class="fa-solid fa-right-from-bracket mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="whitespace-nowrap text-fade">Sign Out</span>
         </a>
@@ -250,5 +251,10 @@
         </div>
       </div>
   </main>
+    <footer class="mt-[5rem]">
+      <div class="border-gray-300 border-1 h-15 tablet:h-20 flex items-center justify-center">
+        <p class="font-semibold text-[13px] tablet:text-[16px]">2025 | St. Matthew Academy of Cavite - Student Portal</p>
+      </div>
+    </footer>
 </body>
 </html>

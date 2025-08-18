@@ -12,27 +12,27 @@
   <div class="flex">
 
     <!-- Sidebar -->
-    <div id="sidebar" class="fixed top-0 left-0 h-screen bg-[#013169] overflow-hidden w-[280px] z-30 transition-all duration-300 ease-in-out">
-    <div class="flex justify-center items-center p-3 mt-1">
-      <img src="images/schoolLogo.PNG" class="h-12 w-12 object-contain ml-1" alt="School Logo">
-      <p class="text-white font-bold text-[20px] leading-none ml-1 whitespace-nowrap text-fade">STUDENT PORTAL</p>
-    </div>
+  <div id="sidebar" class="fixed top-0 left-0 h-screen bg-[#013169] overflow-hidden w-[280px] z-30 transition-all duration-300 ease-in-out">
+    <div class="flex tablet:justify-center items-center p-3 mt-1">
+        <img src="images/schoolLogo.PNG" class="h-12 w-12 object-contain tablet:ml-1" alt="School Logo">
+        <p class="text-white font-bold text-[20px] leading-none ml-1 whitespace-nowrap text-fade">STUDENT PORTAL</p>
+      </div>
     <hr class="border-[#4b608e] mt-1">
     <ul class="text-white text-[16px] font-light list-none p-0">
       <li class="my-2 mt-5">
-        <a href="landingPage.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+        <a href="landingPage.html" class="flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
           <i class="fa-solid fa-chart-line mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="whitespace-nowrap text-fade">Dashboard</span>
         </a>
       </li>
       <li class="my-2">
-        <a href="userProfile.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+        <a href="userProfile.html" class="flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
           <i class="fa-solid fa-user mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="whitespace-nowrap text-fade">My Profile</span>
         </a>
       </li>
       <li class="my-2">
-        <div class="cursor-pointer flex items-center hover:bg-[#496592] py-2 mx-2 rounded transition-colors duration-300"
+        <div class="cursor-pointer flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded transition-colors duration-300"
              onclick="toggleFolder('about')">
           <i class="fa-solid fa-chart-column mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="my-1 text-[16px] whitespace-nowrap text-fade">Academic Record</span>
@@ -41,25 +41,25 @@
         <div id="about" class="ml-15 mt-2 text-[14px] dropdown-transition overflow-hidden">
           <ul class="space-y-3 list-none p-0">
             <li>
-              <a href="subjectsPage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Subjects</a>
+              <a href="subjectsPage.html" class="block hover:bg-[#496592] px-5 py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Subjects</a>
             </li>
             <li>
-              <a href="gradesPage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Grades</a>
+              <a href="gradesPage.html" class="block hover:bg-[#496592] px-5 py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Grades</a>
             </li>
             <li>
-              <a href="balancePage.html" class="block hover:bg-[#496592] px-5 py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Balance</a>
+              <a href="balancePage.html" class="block hover:bg-[#496592] px-5 py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">Balance</a>
             </li>
           </ul>
         </div>
       </li>
       <li class="my-2">
-        <a href="announcementPage.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+        <a href="announcementPage.html" class="flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
           <i class="fa-solid fa-bullhorn mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="whitespace-nowrap text-fade">Announcements</span>
         </a>
       </li>
       <li class="my-2">
-        <a href="index.html" class="flex items-center hover:bg-[#496592] py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
+        <a href="index.html" class="flex items-center hover:bg-[#496592] py-1 tablet:py-2 mx-2 rounded text-white no-underline transition-colors duration-300">
           <i class="fa-solid fa-right-from-bracket mx-5 w-5 mt-1 text-center flex-shrink-0"></i>
           <span class="whitespace-nowrap text-fade">Sign Out</span>
         </a>
@@ -75,25 +75,22 @@
 
       <!-- Main Content -->
         <main id="main-content" class="transition-all duration-300 ease-in-out pt-12 ml-[280px] h-screen w-screen">
-          <div class="grid grid-cols-1 md:grid-rows-[1fr_0.5fr_1fr] sm:grid-cols-2 md:grid-cols-3 gap-3 p-4 h-full w-full">
-            <div class="p-4 shadow rounded-b-lg rounded-t-lg border-gray-300 border-1 rounded col-span-2 leading-5 flex items-center">
-              <p class="text-[40px] font-bold text-school-text">Hello there, Dela Cruz! <br> <span class="text-[18px] text-black font-normal">Always stay updated in your Student Portal.</span> </p>
+          <div class="grid grid-cols-1 cp:grid-rows-[0.2fr_0.150fr_0.150fr_0.3fr] sm:grid-rows-[0.2fr_0.150fr_0.3fr] md:grid-rows-[0.3fr_0.150fr] md:grid-cols-[0.5fr_0.5fr_0.5fr] sm:grid-cols-2 gap-5 p-4 h-full w-full">
+            <div class=" cp:pl-3 tablet:p-4 shadow rounded-b-lg rounded-t-lg border-gray-300 border-1 rounded col-span-2 leading-5 flex items-center">
+              <p class="tablet:text-[30px] cp:text-[25px] font-bold text-school-text">Hello there, Dela Cruz! <br> <span class="cp:text-[15px] text-black font-normal">Always stay updated in your Student Portal.</span> </p>
             </div>
-            <div class="shadow rounded-b-lg rounded-t-lg border-gray-300 border-1 rounded col-span-2 md:row-span-3 md:col-start-3 row-start-5 sm:row-start-4 sm:col-span-2">
-              <p class="font-medium text-[18px] py-1 px-3">Announcement</p>
+            <div class="shadow rounded-b-lg rounded-t-lg border-gray-300 border-1 rounded col-span-2 md:row-span-3 md:col-start-3 row-start-4 sm:row-start-3">
+              <p class="font-medium text-[17px] tablet:text-[18px] py-1 px-3">Announcement</p>
               <hr class="border-[#dadada] mt-1 p-0">
-                <div class="leading-4.5 pl-5 pt-5">
-                  <a href="announcementPage.html" class="text-school-text text-[20px] font-semibold">Buwan ng Wika<br> <span class="text-[#c5c5c5] text-[15px]">Date posted: August 13, 2025</span></a>
+                <div class="cp:pl-3 cp:pt-3 leading-4.5 tablet:pl-5 tablet:pt-5">
+                  <a href="announcementPage.html" class="text-school-text text-[15px] tablet:text-[18px] font-semibold">Buwan ng Wika<br> <span class="text-[#c5c5c5] text-[12px] tablet:text-[15px]">Date posted: August 13, 2025</span></a>
                 </div>
             </div>
-            <div class="pl-5 p-4 shadow rounded-b-lg rounded-t-lg border-gray-300 border-1 rounded col-span-2 sm:col-span-1 flex items-center leading-6">
-              <p class="text-[#c5c5c5] text-[15px]">Current school year: <br> <span class="text-[30px] text-black font-bold">2025-2026</span></p>
+            <div class="cp:pl-3 tablet:pl-5 tablet:p-4 shadow rounded-b-lg rounded-t-lg border-gray-300 border-1 rounded col-span-2 sm:col-span-1 flex items-center leading-6">
+              <p class="text-[#c5c5c5] text-[15px]">Current school year: <br> <span class="text-[25px] text-black font-bold">2025-2026</span></p>
             </div>
-            <div class="pl-5 p-4 shadow rounded-b-lg rounded-t-lg border-gray-300 border-1 rounded col-span-2 cp:row-start-3 sm:col-span-1 sm:col-start-2 sm:row-start-2 flex items-center leading-6">
-              <p class="text-[#c5c5c5] text-[15px]">Current balance: <br> <span class="text-[30px] text-black font-bold">₱75.00</span></p>
-            </div>
-            <div class="p-4 shadow rounded-b-lg rounded-t-lg border-gray-300 border-1 rounded col-span-2">
-              <span>Item 5</span>
+            <div class="cp:pl-3 tablet:pl-5 tablet:p-4 shadow rounded-b-lg rounded-t-lg border-gray-300 border-1 rounded col-span-2 cp:row-start-3 sm:col-span-1 sm:col-start-2 sm:row-start-2 flex items-center leading-6">
+              <p class="text-[#c5c5c5] text-[15px]">Current balance: <br> <span class="text-[25px] text-black font-bold">₱75.00</span></p>
             </div>
           </div>
         </main>
