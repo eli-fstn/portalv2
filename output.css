@@ -915,6 +915,16 @@
       background-color: var(--color-white);
     }
   }
+  .cp\:text-\[16px\] {
+    @media (width >= 300px) {
+      font-size: 16px;
+    }
+  }
+  .cp\:text-\[18px\] {
+    @media (width >= 300px) {
+      font-size: 18px;
+    }
+  }
   .tablet\:p-6 {
     @media (width >= 768px) {
       padding: calc(var(--spacing) * 6);
@@ -1058,6 +1068,12 @@
   .md\:grid-rows-\[1fr_0\.7fr_1fr\] {
     @media (width >= 48rem) {
       grid-template-rows: 1fr 0.7fr 1fr;
+    }
+  }
+  .md\:text-2xl {
+    @media (width >= 48rem) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
 }
